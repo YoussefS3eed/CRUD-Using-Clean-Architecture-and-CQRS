@@ -25,11 +25,52 @@ The application is built around a simple "Todo" item domain to illustrate core c
 - **Pattern:** CQRS with Mediator (MediatR library)
 - **Database:** (Implied, but not specified. Could be Entity Framework Core, likely configured in the `Infrastructure` layer.)
 
-## 📁 Project Structure
+## 📂 Project Structure
 
 The solution is organized into four main projects, following Clean Architecture principles:
 
-TodoCQRS.slnx ├── 📂 API # Presentation Layer (Entry Point) │ ├── Controllers/ # API endpoints (e.g., TodosController) │ └── Program.cs # Application startup & DI configuration ├── 📂 Application # Application Layer (Use Cases) │ ├── Commands/ # CQRS Commands (Create, Update, Delete) │ ├── Queries/ # CQRS Queries (GetById, GetAll) │ ├── DTOs/ # Data Transfer Objects │ └── Interfaces/ # Abstractions for Infrastructure (e.g., IRepository) ├── 📂 Domain # Domain Layer (Core Business Logic) │ ├── Entities/ # Business models (e.g., TodoItem) │ └── Common/ # Base classes, Enums, Shared kernel ├── 📂 Infrastructure # Infrastructure Layer (External Dependencies) │ ├── Persistence/ # DbContext, Repository implementations │ └── DependencyInjection.cs # Service registration for the layer └── 📄 request.http # HTTP requests file for testing endpoints
+```mermaid
+%%{init: {"theme":"base","themeVariables":{"background":"#ffffff"}}}%%
+mindmap
+  root(("CRUD Using Clean Architecture & CQRS"))
+    (.gitignore)
+    (Dotnet Commands.txt)
+    (README.md)
+    (TodoCQRS.slnx)
+    (UML OF App Flow.drawio)
+    (request.http)
+    [API]
+      [Controllers]
+        (TodosController.cs)
+      (Program.cs)
+      (appsettings.json)
+    [Application]
+      [Commands]
+        (CreateTodoCommand.cs)
+        (UpdateTodoCommand.cs)
+        (DeleteTodoCommand.cs)
+      [Queries]
+        (GetAllTodosQuery.cs)
+        (GetTodoByIdQuery.cs)
+      [DTOs]
+        (TodoDto.cs)
+      [Interfaces]
+        (ITodoRepository.cs)
+      (DependencyInjection.cs)
+    [Domain]
+      [Entities]
+        (TodoItem.cs)
+      [Common]
+        (BaseEntity.cs)
+      [Enums]
+        (TodoStatus.cs)
+    [Infrastructure]
+      [Persistence]
+        (AppDbContext.cs)
+        [Migrations]
+        (TodoRepository.cs)
+      (DependencyInjection.cs)
+```
 
 ### Layer Responsibilities
 
