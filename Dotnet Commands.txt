@@ -1,0 +1,37 @@
+-- Add class Library X
+dotnet new classlib -n X
+
+-- Add Web API X
+dotnet new web -n X
+
+-- Add A reference B --> it means A has a reference from B
+dotnet add A reference B
+
+-- Add slnx X
+dotnet new sln -n X
+
+-- Add Projects reference 
+dotnet sln add (ls -r **/*.csproj)
+
+-- Install Package X in A
+dotnet add A package X
+
+
+
+
+
+
+
+
+
+
+
+[Installed Package]
+
+* In Application -> MediatR
+* In Application -> FluentValidation.DependencyInjectionExtensions
+
+* In Infrastructure -> Microsoft.EntityFrameworkCore.Tools
+* In Infrastructure -> Microsoft.EntityFrameworkCore.SqlServer
+
+* In API -> Microsoft.EntityFrameworkCore.Design
