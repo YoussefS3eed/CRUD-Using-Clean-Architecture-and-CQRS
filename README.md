@@ -49,7 +49,7 @@ The application handles basic operations (Create, Read, Update, Delete) while st
 The solution embraces Clean Architecture principles, ensuring the core business logic is independent of frameworks, UI, and external agencies.
 
 ```mermaid
-%%{init: {"theme":"base","themeVariables":{"background":"#ffffff", "primaryColor":"#f4f4f4", "primaryBorderColor":"#333", "lineColor":"#333"}}}%%
+%%{init: {"theme":"base","themeVariables":{"background":"#ffffff"}}}%%
 mindmap
   root(("CRUD Using Clean Architecture & CQRS"))
     (.gitignore)
