@@ -1,5 +1,5 @@
 using Domain.Todos;
-using Infrastructure.Data.Configurations;
+using Infrastructure.Configurations;
 using Microsoft.EntityFrameworkCore;
 namespace Infrastructure.Data;
 

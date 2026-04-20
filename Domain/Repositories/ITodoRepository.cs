@@ -1,6 +1,6 @@
 ﻿using Domain.Todos;
 
-namespace Application.Abstractions;
+namespace Domain.Repositories;
 
 public interface ITodoRepository
 {

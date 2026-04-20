@@ -1,5 +1,5 @@
 using API.Exceptions;
-using Application.Common;
+using Application.Extensions;
 using Infrastructure.Common;
 using Microsoft.EntityFrameworkCore;
 
@@ -12,10 +12,10 @@ builder.Services.AddExceptionHandler<GlobalExceptionHandler>();
 builder.Services.AddControllers();
 
 // ======== Infrastructure Services ========
-builder.Services.AddInfrastructureServices(builder.Configuration);
+builder.Services.AddInfrastructure(builder.Configuration);
 
 // ======== Application Services ========
-builder.Services.AddApplictionServices();
+builder.Services.AddAppliction();
 
 
 var app = builder.Build();

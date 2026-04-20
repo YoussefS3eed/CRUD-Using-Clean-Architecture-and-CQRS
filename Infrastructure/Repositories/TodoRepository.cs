@@ -1,7 +1,8 @@
-﻿using Application.Abstractions;
+﻿using Domain.Repositories;
 using Domain.Todos;
+using Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
-namespace Infrastructure.Data.Repositories;
+namespace Infrastructure.Repositories;
 
 public class TodoRepository(AppDbContext context) : ITodoRepository
 {

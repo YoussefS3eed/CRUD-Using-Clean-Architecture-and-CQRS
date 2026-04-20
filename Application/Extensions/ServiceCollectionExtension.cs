@@ -4,11 +4,11 @@ using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
 
-namespace Application.Common;
+namespace Application.Extensions;
 
-public static class DependancyInjection
+public static class ServiceCollectionExtension
 {
-    public static IServiceCollection AddApplictionServices(this IServiceCollection services)
+    public static IServiceCollection AddAppliction(this IServiceCollection services)
     {
         services.AddMediatR(options =>
         {

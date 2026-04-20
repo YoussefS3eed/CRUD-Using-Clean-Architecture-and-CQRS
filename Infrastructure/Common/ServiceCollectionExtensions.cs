@@ -1,15 +1,15 @@
-﻿using Application.Abstractions;
+﻿using Domain.Repositories;
 using Infrastructure.Data;
-using Infrastructure.Data.Repositories;
+using Infrastructure.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Infrastructure.Common;
 
-public static class DependancyInjection
+public static class ServiceCollectionExtensions
 {
-    public static IServiceCollection AddInfrastructureServices(this IServiceCollection services,
+    public static IServiceCollection AddInfrastructure(this IServiceCollection services,
         IConfiguration configuration)
     {
         var connectionString =
